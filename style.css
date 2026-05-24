@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Afasta a logo dos links */
+    align-items: center;
+    padding: 15px 8%; /* Espaçamento interno e recuo nas laterais */
+    width: 100%;
+    
+    /* Gradiente linear idêntico ao do topo da imagem */
+    background: linear-gradient(to right, #a855f7, #ec4899, #f97316); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil embaixo */
+}
+
+.nav-pages {
+    display: flex;
+    align-items:flex-end;
+    justify-content: space-around;
+    gap: 40px;
+    list-style: none;
+    color: whitesmoke;
+    font-weight: 500;
+    opacity: 2;
+}
+
+.nav-pages li::hover{
+    cursor:pointer;
+
+}
