@@ -27,7 +27,7 @@
 
         <section class="hero">
             <div class="hero-text">
-                <h1>Cuidado Completo para seu Pet</h1>
+                <h1>Cuidado Completo para <br>seu Pet</h1>
                 <p>Oferecemos os melhores serviços de banho, tosa e atendimento veterinário para deixar seu pet feliz e saudável.</p>
                 <a href="#" class="btn btn-white">Agendar Agora</a>
             </div>
@@ -46,11 +46,13 @@
                 <div class="icon">✂️</div>
                 <h3>Banho & Tosa</h3>
                 <p>Serviços completos de higiene e estética para seu pet com profissionais qualificados.</p>
+                <a><button class="btn-agendar">Agendar</button></a>
             </div>
             <div class="service-card card-purple">
                 <div class="icon">🩺</div>
                 <h3>Consultas Veterinárias</h3>
                 <p>Atendimento veterinário de qualidade com médicos especializados.</p>
+                <a><button class="btn-agendar">Agendar</button></a>
             </div>
             <div class="service-card card-orange">
                 <div class="icon">📅</div>
@@ -64,18 +66,51 @@
             </div>
         </div>
     </section>
-
+<!-- 
     <section style="background-color: #fdfdfd;">
         <h2 class="section-title">Nossos Clientes</h2>
         <p class="section-subtitle">Pets felizes e bem cuidados</p>
-        
-        <div class="clients-grid">
+         -->
+        <!-- <div class="clients-grid">
             <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Cachorro 1">
             <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Gato 1">
             <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Cachorro 2">
             <img src="https://images.unsplash.com/photo-1513360371669-4adf3dd7dff8?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Gato 2">
+        </div> -->
+
+    <section class="carousel-section">
+        <h2 class="section-title">Nossos Clientes</h2>
+        <p class="section-subtitle">Pets felizes e bem cuidados</p>
+    
+        <div class="carousel-container">
+            <div class="carousel-track">
+                <div class="carousel-slide active"><img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=500&q=80" alt="Pet 1"></div>
+                <div class="carousel-slide"><img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=500&q=80" alt="Pet 2"></div>
+                <div class="carousel-slide"><img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&w=500&q=80" alt="Pet 3"></div>
+                <div class="carousel-slide"><img src="https://images.unsplash.com/photo-1513360371669-4adf3dd7dff8?auto=format&fit=crop&w=500&q=80" alt="Pet 4"></div>
+                <div class="carousel-slide"><img src="https://images.unsplash.com/photo-1533738363-b7f9aef128ce?auto=format&fit=crop&w=500&q=80" alt="Pet 5"></div>
+                <div class="carousel-slide"><img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=500&q=80" alt="Pet 6"></div>
+                <div class="carousel-slide"><img src="https://images.unsplash.com/photo-1574158622643-69d34d72650a?auto=format&fit=crop&w=500&q=80" alt="Pet 7"></div>
+                <div class="carousel-slide"><img src="https://images.unsplash.com/photo-1592194996308-7b43878e84a6?auto=format&fit=crop&w=500&q=80" alt="Pet 8"></div>
+                <div class="carousel-slide"><img src="https://images.unsplash.com/photo-1535268647977-a403b69078bb?auto=format&fit=crop&w=500&q=80" alt="Pet 9"></div>
+                <div class="carousel-slide"><img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?auto=format&fit=crop&w=500&q=80" alt="Pet 10"></div>
+            </div>
+
+            <div class="carousel-dots">
+                <span class="dot active" onclick="currentSlide(0)"></span>
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+                <span class="dot" onclick="currentSlide(6)"></span>
+                <span class="dot" onclick="currentSlide(7)"></span>
+                <span class="dot" onclick="currentSlide(8)"></span>
+                <span class="dot" onclick="currentSlide(9)"></span>
+            </div>
         </div>
     </section>
+    
 
     <section>
         <h2 class="section-title">O que Dizem Sobre Nós</h2>
@@ -136,17 +171,100 @@
         .btn {
             display: inline-block;
             padding: 12px 24px;
-            border-radius: 25px;
+            border-radius: 10px;
             text-decoration: none;
             font-weight: bold;
             border: none;
             cursor: pointer;
-            transition: opacity 0.3s;
+            transition: 0.3s ease;
         }
-        .btn:hover { opacity: 0.9; }
+        .btn:hover { opacity: 0.9; transform: scale(1.1); }
         .btn-white { background: white; color: #9c27b0; }
         .btn-gradient { background: linear-gradient(to right, #b92b27, #1565C0); color: white; } /* Placeholder, reescrito abaixo */
         .btn-pink { background: linear-gradient(to right, #e040fb, #d81b60); color: white; }
+
+        .btn-agendar{
+            display: inline-block;
+            margin-top: 15px;
+            padding: 8px 18px;
+            background-color: rgba(255, 255, 255, 0.2); /* Branco bem transparente */
+            color: #ffffff;
+            font-size: 14px;
+            font-weight: bold;
+            text-decoration: none;
+            border: 1px solid rgba(255, 255, 255, 0.4); /* Borda sutil para dar acabamento */
+            border-radius: 15px; /* Deixa o botão arredondado igual aos cards */
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .btn-agendar:hover {
+            background-color: #ffffff; 
+            color: #5b5b60; 
+            transform: translateY(-2px); 
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Estilos do Carrossel */
+        .carousel-container {
+            max-width: 450px; /* Tamanho fixo para focar em uma foto por vez */
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .carousel-track {
+            position: relative;
+            width: 100%;
+            height: 350px; /* Altura controlada do quadrado da foto */
+        }
+
+        .carousel-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out; /* Efeito suave de fade ao trocar */
+            z-index: 1;
+        }
+
+        .carousel-slide.active {
+            opacity: 1;
+            z-index: 2;
+        }
+
+        .carousel-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Mantém a proporção perfeita sem distorcer */
+            border-radius: 20px; /* Bordas arredondadas iguaizinhos ao seu design */
+            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+        }
+
+        /* Área das Bolinhas Indicadoras */
+        .carousel-dots {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .dot {
+            cursor: pointer;
+            height: 12px;
+            width: 12px;
+            margin: 0 5px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        /* Bolinha ativa ou quando o mouse passa por cima */
+        .dot.active, .dot:hover {
+            background-color: #F13689; /* Usa o rosa do seu gradiente principal */
+            transform: scale(1.2);
+        }
 
         /* Cabeçalho / Navbar */
         header {
@@ -182,33 +300,39 @@
         /* Seção Hero (Topo) */
         .hero {
             display: flex;
-            padding: 50px;
+            padding: 100px;
             align-items: center;
             justify-content: space-between;
         }
         .hero-text {
-            max-width: 50%;
+            max-width: 60%;
+            text-align: left;
         }
         .hero h1 {
-            font-size: 48px;
-            margin-bottom: 20px;
+            font-size: 54px;
+            font-weight: 700;
+            line-height: 1.15;
+            margin-bottom: 25px;
         }
         .hero p {
-            font-size: 18px;
+            font-size: 21px;
+            font-weight: 400;
+            opacity: 0.95;
             margin-bottom: 30px;
-            line-height: 1.5;
+            line-height: 1.4;
         }
         .hero-image img {
             width: 100%;
             max-width: 500px;
-            border-radius: 20px;
+            border-radius: 15px;
             object-fit: cover;
+            margin-right: 40px;
         }
 
         /* Seções Gerais */
         section { padding: 60px 50px; text-align: center; }
-        .section-title { font-size: 32px; margin-bottom: 10px; color: #1a1a2e; }
-        .section-subtitle { color: #666; margin-bottom: 40px; }
+        .section-title { font-size: 35px; margin-bottom: 10px; color: #1a1a2e; }
+        .section-subtitle { color: #666; margin-bottom: 50px; }
 
         /* Grid de Serviços */
         .services-grid {
@@ -220,13 +344,20 @@
         .service-card {
             flex: 1;
             min-width: 200px;
-            padding: 30px 20px;
+            min-height: 200px;
+            padding:  20px;
             border-radius: 15px;
             color: white;
             text-align: left;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-card:hover{
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
         }
         .service-card h3 { margin: 15px 0 10px; }
-        .service-card p { font-size: 14px; line-height: 1.4; opacity: 0.9; }
+        .service-card p { font-size: 15px; line-height: 1.4; opacity: 0.9; }
         .icon {
             display: inline-block;
             background: white;
@@ -238,9 +369,9 @@
             justify-content: center;
             font-size: 20px;
         }
-        .card-pink { background: linear-gradient(135deg, #ff4081, #c2185b); }
+        .card-pink { background: linear-gradient(135deg, #fa528a, #db266f); }
         .card-purple { background: linear-gradient(135deg, #e040fb, #7b1fa2); }
-        .card-orange { background: linear-gradient(135deg, #ff9800, #e65100); }
+        .card-orange { background: linear-gradient(135deg, #ffa217, #fa5d08); }
         .card-red { background: linear-gradient(135deg, #ff5252, #c62828); }
 
         /* Grid de Clientes (Fotos) */
@@ -291,5 +422,32 @@
         }
     </style>
 
+    <script>
+    let slideIndex = 0;
+    const slides = document.querySelectorAll('.carousel-slide');
+    const dots = document.querySelectorAll('.dot');
+
+    function showSlides(index) {
+        // Trata os limites caso mude dinamicamente
+        if (index >= slides.length) slideIndex = 0;
+        if (index < 0) slideIndex = slides.length - 1;
+
+        // Remove a classe active de todas as fotos e bolinhas
+        slides.forEach(slide => slide.classList.remove('active'));
+        dots.forEach(dot => dot.classList.remove('active'));
+
+        // Ativa apenas a foto e a bolinha correspondente ao índice clicado
+        slides[slideIndex].classList.add('active');
+        dots[slideIndex].classList.add('active');
+    }
+
+    function currentSlide(index) {
+        slideIndex = index;
+        showSlides(slideIndex);
+    }
+
+    // Opcional: Se quiser que o carrossel mude sozinho a cada 4 segundos, descomente a linha abaixo:
+    // setInterval(() => { slideIndex++; showSlides(slideIndex); }, 4000);
+</script>
 </body>
 </html>
