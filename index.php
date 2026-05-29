@@ -11,7 +11,15 @@
     <div class="bg-gradient">
         <header class="nav-sombra">
             <div class="logo">
-                <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#ffffff"><path d="M180-475q-42 0-71-29t-29-71q0-42 29-71t71-29q42 0 71 29t29 71q0 42-29 71t-71 29Zm109-189q-29-29-29-71t29-71q29-29 71-29t71 29q29 29 29 71t-29 71q-29 29-71 29t-71-29Zm240 0q-29-29-29-71t29-71q29-29 71-29t71 29q29 29 29 71t-29 71q-29 29-71 29t-71-29Zm251 189q-42 0-71-29t-29-71q0-42 29-71t71-29q42 0 71 29t29 71q0 42-29 71t-71 29ZM266-75q-45 0-75.5-34.5T160-191q0-52 35.5-91t70.5-77q29-31 50-67.5t50-68.5q22-26 51-43t63-17q34 0 63 16t51 42q28 32 49.5 69t50.5 69q35 38 70.5 77t35.5 91q0 47-30.5 81.5T694-75q-54 0-107-9t-107-9q-54 0-107 9t-107 9Z"/></svg> PetCare
+                <svg xmlns="http://www.w3.org/2000/svg" width="32px" height="32px" viewBox="0 0 24 24" fill="none">
+                    <circle cx="12" cy="12" r="10.5" stroke="#ffffff" stroke-width="1.5" fill="none"/>
+                    
+                    <path d="M12 11.5c-1.38 0-2.5 1.12-2.5 2.5 0 .83.41 1.55 1.04 2h2.92c.63-.45 1.04-1.17 1.04-2 0-1.38-1.12-2.5-2.5-2.5z" fill="#ffffff"/>
+                    <circle cx="8.5" cy="9.5" r="1" fill="#ffffff"/>
+                    <circle cx="10.8" cy="8" r="1" fill="#ffffff"/>
+                    <circle cx="13.2" cy="8" r="1" fill="#ffffff"/>
+                    <circle cx="15.5" cy="9.5" r="1" fill="#ffffff"/>
+                </svg>
             </div>
 
             <div>
@@ -78,39 +86,106 @@
             <img src="https://images.unsplash.com/photo-1513360371669-4adf3dd7dff8?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Gato 2">
         </div> -->
 
-    <section class="carousel-section">
+    <section class="polaroid-section">
         <h2 class="section-title">Nossos Clientes</h2>
         <p class="section-subtitle">Pets felizes e bem cuidados</p>
     
-        <div class="carousel-container">
-            <div class="carousel-track">
-                <div class="carousel-slide active"><img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=500&q=80" alt="Pet 1"></div>
-                <div class="carousel-slide"><img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=500&q=80" alt="Pet 2"></div>
-                <div class="carousel-slide"><img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&w=500&q=80" alt="Pet 3"></div>
-                <div class="carousel-slide"><img src="https://images.unsplash.com/photo-1513360371669-4adf3dd7dff8?auto=format&fit=crop&w=500&q=80" alt="Pet 4"></div>
-                <div class="carousel-slide"><img src="https://images.unsplash.com/photo-1533738363-b7f9aef128ce?auto=format&fit=crop&w=500&q=80" alt="Pet 5"></div>
-                <div class="carousel-slide"><img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=500&q=80" alt="Pet 6"></div>
-                <div class="carousel-slide"><img src="https://images.unsplash.com/photo-1574158622643-69d34d72650a?auto=format&fit=crop&w=500&q=80" alt="Pet 7"></div>
-                <div class="carousel-slide"><img src="https://images.unsplash.com/photo-1592194996308-7b43878e84a6?auto=format&fit=crop&w=500&q=80" alt="Pet 8"></div>
-                <div class="carousel-slide"><img src="https://images.unsplash.com/photo-1535268647977-a403b69078bb?auto=format&fit=crop&w=500&q=80" alt="Pet 9"></div>
-                <div class="carousel-slide"><img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?auto=format&fit=crop&w=500&q=80" alt="Pet 10"></div>
-            </div>
+        <div class="polaroid-carousel">
+            <div class="polaroid-track">
+                
+                <div class="polaroid-card tilt-left">
+                    <span class="pet-badge badge-heart">❤️</span>
+                    <div class="polaroid-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=400&q=80" alt="Pet 1">
+                    </div>
+                    <p class="polaroid-caption">Pipoca 🐾</p>
+                </div>
 
-            <div class="carousel-dots">
-                <span class="dot active" onclick="currentSlide(0)"></span>
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
-                <span class="dot" onclick="currentSlide(4)"></span>
-                <span class="dot" onclick="currentSlide(5)"></span>
-                <span class="dot" onclick="currentSlide(6)"></span>
-                <span class="dot" onclick="currentSlide(7)"></span>
-                <span class="dot" onclick="currentSlide(8)"></span>
-                <span class="dot" onclick="currentSlide(9)"></span>
+                <div class="polaroid-card tilt-right">
+                    <span class="pet-badge badge-star">⭐</span>
+                    <div class="polaroid-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=400&q=80" alt="Pet 2">
+                    </div>
+                    <p class="polaroid-caption">Mingau ✨</p>
+                </div>
+
+                <div class="polaroid-card tilt-left-subtle">
+                    <span class="pet-badge badge-sparkle">✨</span>
+                    <div class="polaroid-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&w=400&q=80" alt="Pet 3">
+                    </div>
+                    <p class="polaroid-caption">Fred 🎾</p>
+                </div>
+
+                <div class="polaroid-card tilt-right-subtle">
+                    <span class="pet-badge badge-clover">🍀</span>
+                    <div class="polaroid-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1513360371669-4adf3dd7dff8?auto=format&fit=crop&w=400&q=80" alt="Pet 4">
+                    </div>
+                    <p class="polaroid-caption">Luna 🌙</p>
+                </div>
+
+                <div class="polaroid-card tilt-left">
+                    <span class="pet-badge badge-crown">👑</span>
+                    <div class="polaroid-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308?auto=format&fit=crop&w=400&q=80" alt="Pet 5">
+                    </div>
+                    <p class="polaroid-caption">Floquinho 🥕</p>
+                </div>
+
+                <div class="polaroid-card tilt-right">
+                    <span class="pet-badge badge-fire">🔥</span>
+                    <div class="polaroid-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=400&q=80" alt="Pet 6">
+                    </div>
+                    <p class="polaroid-caption">Thor ⚡</p>
+                </div>
+
+                <div class="polaroid-card tilt-left-subtle">
+                    <span class="pet-badge badge-diamond">💎</span>
+                    <div class="polaroid-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1533738363-b7f9aef128ce?auto=format&fit=crop&w=400&q=80" alt="Pet 7">
+                    </div>
+                    <p class="polaroid-caption">Mel 🍯</p>
+                </div>
+
+                <div class="polaroid-card tilt-right-subtle">
+                    <span class="pet-badge badge-bow">🎀</span>
+                    <div class="polaroid-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=400&q=80" alt="Pet 8">
+                    </div>
+                    <p class="polaroid-caption">Amora 🌸</p>
+                </div>
+
+                <div class="polaroid-card tilt-left">
+                    <span class="pet-badge badge-sun">☀️</span>
+                    <div class="polaroid-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1535268647977-a403b69078bb?auto=format&fit=crop&w=400&q=80" alt="Pet 9">
+                    </div>
+                    <p class="polaroid-caption">Apolo ☀️</p>
+                </div>
+
+                <div class="polaroid-card tilt-right">
+                    <span class="pet-badge badge-music">🎵</span>
+                    <div class="polaroid-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1574158622643-69d34d72650a?auto=format&fit=crop&w=400&q=80" alt="Pet 10">
+                    </div>
+                    <p class="polaroid-caption">Simba 🦁</p>
+                </div>
+
+                <div class="polaroid-card tilt-left"><span class="pet-badge badge-heart">❤️</span><div class="polaroid-img-wrapper"><img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=400&q=80"></div><p class="polaroid-caption">Pipoca 🐾</p></div>
+                <div class="polaroid-card tilt-right"><span class="pet-badge badge-star">⭐</span><div class="polaroid-img-wrapper"><img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=400&q=80"></div><p class="polaroid-caption">Mingau ✨</p></div>
+                <div class="polaroid-card tilt-left-subtle"><span class="pet-badge badge-sparkle">✨</span><div class="polaroid-img-wrapper"><img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&w=400&q=80"></div><p class="polaroid-caption">Fred 🎾</p></div>
+                <div class="polaroid-card tilt-right-subtle"><span class="pet-badge badge-clover">🍀</span><div class="polaroid-img-wrapper"><img src="https://images.unsplash.com/photo-1513360371669-4adf3dd7dff8?auto=format&fit=crop&w=400&q=80"></div><p class="polaroid-caption">Luna 🌙</p></div>
+                <div class="polaroid-card tilt-left"><span class="pet-badge badge-crown">👑</span><div class="polaroid-img-wrapper"><img src="https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308?auto=format&fit=crop&w=400&q=80"></div><p class="polaroid-caption">Floquinho 🥕</p></div>
+                <div class="polaroid-card tilt-right"><span class="pet-badge badge-fire">🔥</span><div class="polaroid-img-wrapper"><img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=400&q=80"></div><p class="polaroid-caption">Thor ⚡</p></div>
+                <div class="polaroid-card tilt-left-subtle"><span class="pet-badge badge-diamond">💎</span><div class="polaroid-img-wrapper"><img src="https://images.unsplash.com/photo-1533738363-b7f9aef128ce?auto=format&fit=crop&w=400&q=80"></div><p class="polaroid-caption">Mel 🍯</p></div>
+                <div class="polaroid-card tilt-right-subtle"><span class="pet-badge badge-bow">🎀</span><div class="polaroid-img-wrapper"><img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=400&q=80"></div><p class="polaroid-caption">Amora 🌸</p></div>
+                <div class="polaroid-card tilt-left"><span class="pet-badge badge-sun">☀️</span><div class="polaroid-img-wrapper"><img src="https://images.unsplash.com/photo-1535268647977-a403b69078bb?auto=format&fit=crop&w=400&q=80"></div><p class="polaroid-caption">Apolo ☀️</p></div>
+                <div class="polaroid-card tilt-right"><span class="pet-badge badge-music">🎵</span><div class="polaroid-img-wrapper"><img src="https://images.unsplash.com/photo-1574158622643-69d34d72650a?auto=format&fit=crop&w=400&q=80"></div><p class="polaroid-caption">Simba 🦁</p></div>
             </div>
         </div>
-    </section>
-    
+</section>
 
     <section>
         <h2 class="section-title">O que Dizem Sobre Nós</h2>
@@ -203,67 +278,6 @@
             color: #5b5b60; 
             transform: translateY(-2px); 
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-        }
-
-        /* Estilos do Carrossel */
-        .carousel-container {
-            max-width: 450px; /* Tamanho fixo para focar em uma foto por vez */
-            margin: 0 auto;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .carousel-track {
-            position: relative;
-            width: 100%;
-            height: 350px; /* Altura controlada do quadrado da foto */
-        }
-
-        .carousel-slide {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0;
-            transition: opacity 0.5s ease-in-out; /* Efeito suave de fade ao trocar */
-            z-index: 1;
-        }
-
-        .carousel-slide.active {
-            opacity: 1;
-            z-index: 2;
-        }
-
-        .carousel-slide img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* Mantém a proporção perfeita sem distorcer */
-            border-radius: 20px; /* Bordas arredondadas iguaizinhos ao seu design */
-            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-        }
-
-        /* Área das Bolinhas Indicadoras */
-        .carousel-dots {
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        .dot {
-            cursor: pointer;
-            height: 12px;
-            width: 12px;
-            margin: 0 5px;
-            background-color: #bbb;
-            border-radius: 50%;
-            display: inline-block;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-        }
-
-        /* Bolinha ativa ou quando o mouse passa por cima */
-        .dot.active, .dot:hover {
-            background-color: #F13689; /* Usa o rosa do seu gradiente principal */
-            transform: scale(1.2);
         }
 
         /* Cabeçalho / Navbar */
@@ -374,20 +388,113 @@
         .card-orange { background: linear-gradient(135deg, #ffa217, #fa5d08); }
         .card-red { background: linear-gradient(135deg, #ff5252, #c62828); }
 
-        /* Grid de Clientes (Fotos) */
-        .clients-grid {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        .clients-grid img {
-            width: 250px;
-            height: 250px;
-            object-fit: cover;
-            border-radius: 15px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
+       /* Container da Seção */
+.polaroid-section {
+    padding: 60px 0;
+    overflow: hidden;
+    background-color: #fdfdfd;
+}
+
+/* Área visível do Carrossel */
+.polaroid-carousel {
+    width: 100%;
+    overflow: hidden;
+    padding: 40px 0;
+    position: relative;
+}
+
+/* Esteira que carrega os cards e faz a animação contínua */
+.polaroid-track {
+    display: flex;
+    width: calc(240px * 20 + 30px * 20); /* Calcula dinamicamente o tamanho total das 20 fotos */
+    gap: 30px;
+    animation: scrollContinuous 35s linear infinite; /* Movimento retilíneo, uniforme e eterno */
+}
+
+/* GATILHO DE PARADA: Quando o mouse passa no carrossel, a animação pausa */
+.polaroid-carousel:hover .polaroid-track {
+    /* animation-play-state: paused; */
+}
+
+/* Definição da Estética da Foto Polaroid */
+.polaroid-card {
+    width: 240px;
+    background: #ffffff;
+    padding: 14px 14px 24px 14px; /* Base maior simulando a polaroide real */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease;
+    user-select: none;
+}
+
+/* Proporção quadrada interna da foto */
+.polaroid-img-wrapper {
+    width: 100%;
+    height: 210px;
+    overflow: hidden;
+    background-color: #eee;
+}
+
+.polaroid-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Legenda da Polaroid (Fonte manuscrita simulada) */
+.polaroid-caption {
+    font-family: 'Comic Sans MS', 'Chalkboard SE', cursive, sans-serif;
+    color: #444;
+    font-size: 16px;
+    margin-top: 14px;
+    font-weight: 500;
+}
+
+/* Pequenos Símbolos (Badges) fixados no topo do card */
+.pet-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 28px;
+    height: 28px;
+    background: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    z-index: 10;
+}
+
+/* Variações de Inclinação Natural (Efeito bagunçado orgânico) */
+.tilt-left { transform: rotate(-3deg); }
+.tilt-right { transform: rotate(3deg); }
+.tilt-left-subtle { transform: rotate(-1.5deg); }
+.tilt-right-subtle { transform: rotate(2deg); }
+
+/* GATILHO DE CRESCIMENTO: Quando o mouse foca em um card específico */
+.polaroid-card:hover {
+    transform: scale(1.1) rotate(0deg) translateY(-10px); /* Cresce, fica reto e sobe levemente */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    z-index: 999; /* Garante que fique por cima dos vizinhos */
+    cursor: pointer;
+}
+
+/* Lógica da animação CSS que move o eixo X */
+@keyframes scrollContinuous {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-240px * 10 - 30px * 10)); /* Move exatamente metade da esteira */
+    }
+}
 
         /* Avaliações */
         .testimonials-grid {
@@ -422,32 +529,5 @@
         }
     </style>
 
-    <script>
-    let slideIndex = 0;
-    const slides = document.querySelectorAll('.carousel-slide');
-    const dots = document.querySelectorAll('.dot');
-
-    function showSlides(index) {
-        // Trata os limites caso mude dinamicamente
-        if (index >= slides.length) slideIndex = 0;
-        if (index < 0) slideIndex = slides.length - 1;
-
-        // Remove a classe active de todas as fotos e bolinhas
-        slides.forEach(slide => slide.classList.remove('active'));
-        dots.forEach(dot => dot.classList.remove('active'));
-
-        // Ativa apenas a foto e a bolinha correspondente ao índice clicado
-        slides[slideIndex].classList.add('active');
-        dots[slideIndex].classList.add('active');
-    }
-
-    function currentSlide(index) {
-        slideIndex = index;
-        showSlides(slideIndex);
-    }
-
-    // Opcional: Se quiser que o carrossel mude sozinho a cada 4 segundos, descomente a linha abaixo:
-    // setInterval(() => { slideIndex++; showSlides(slideIndex); }, 4000);
-</script>
 </body>
 </html>
