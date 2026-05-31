@@ -1,34 +1,234 @@
+/* CONFIGURAÇÕES GERAIS E RESET */
 * {
     margin: 0;
-    padding:0;
+    padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: #ffffff;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    height: 100%;
+}
+
+/* HERO SECTION (Fundo principal azul/violeta com degradê inferior suave) */
+.hero-section {
+    position: relative;
+    width: 100%;
+    min-height: 600px;
+    background: linear-gradient(180deg, #8E8CD8 0%, #9997E3 85%, #918fde 100%);
+    padding-bottom: 80px;
+    overflow: hidden;
+}
+
+/* MARCAS D'ÁGUA (Patinhas flutuantes no fundo) */
+.paw-bg {
+    position: absolute;
+    color: rgba(255, 255, 255, 0.15);
+    font-size: 8rem;
+    pointer-events: none;
+    transform: rotate(-15deg);
+}
+.paw-1 { top: 60px; left: 30px; font-size: 6rem; }
+.paw-2 { top: 40px; right: 15%; font-size: 7rem; }
+.paw-3 { bottom: 150px; left: 40px; font-size: 5rem; }
+
+/* NAVBAR */
 .navbar {
     display: flex;
-    justify-content: space-between; /* Afasta a logo dos links */
+    justify-content: space-between;
     align-items: center;
-    padding: 15px 8%; /* Espaçamento interno e recuo nas laterais */
-    width: 100%;
-    
-    /* Gradiente linear idêntico ao do topo da imagem */
-    background: linear-gradient(to right, #a855f7, #ec4899, #f97316); 
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil embaixo */
+    padding: 25px 0;
 }
 
-.nav-pages {
+.logo {
+    font-size: 1.6rem;
+    font-weight: 900;
+    color: #ffffff;
     display: flex;
-    align-items:flex-end;
-    justify-content: space-around;
-    gap: 40px;
-    list-style: none;
-    color: whitesmoke;
-    font-weight: 500;
-    opacity: 2;
+    align-items: center;
+    gap: 8px;
 }
 
-.nav-pages li::hover{
-    cursor:pointer;
+.logo-icon {
+    background-color: #FFA542;
+    padding: 5px;
+    border-radius: 50%;
+    font-size: 1.1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 35px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 700;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+    position: relative;
+}
+
+.nav-links a.active {
+    color: #ffffff;
+}
+
+/* Linha laranja abaixo do menu ativo */
+.nav-links a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #FFA542;
+    border-radius: 2px;
+}
+
+.nav-links a:hover {
+    color: #ffffff;
+}
+
+.cart-button {
+    background-color: #FFA542;
+    color: #ffffff;
+    padding: 10px 22px;
+    border-radius: 25px;
+    font-weight: 800;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(255, 165, 66, 0.2);
+}
+
+/* CONTEÚDO HERO */
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+    padding-bottom: 40px;
+}
+
+.hero-left {
+    flex: 1;
+    z-index: 2;
+}
+
+.hero-title {
+    font-size: 3.4rem;
+    font-weight: 900;
+    color: #ffffff;
+    line-height: 1.15;
+    margin-bottom: 35px;
+    letter-spacing: -0.5px;
+}
+
+.btn-cta {
+    background-color: #FFA542;
+    color: #ffffff;
+    border: none;
+    padding: 16px 36px;
+    border-radius: 30px;
+    font-weight: 800;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(255, 165, 66, 0.4);
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn-cta:hover {
+    background-color: #ff9626;
+    transform: translateY(-2px);
+}
+
+.hero-right {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Placeholder para a imagem grande do cão e gato juntos */
+.main-animals-placeholder {
+    width: 550px;
+    height: 420px;
+    background: rgba(255, 255, 255, 0.1); /* Substituir por url('sua-imagem.png') no projeto real */
+    border-radius: 30px;
+    position: relative;
+    border-radius: 50px;
+}
+
+/* CONTROLES DO SLIDER INFERIOR (Cards e Setas) */
+.slider-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    position: absolute;
+    bottom: -40px; /* Faz com que os cards fiquem cortados na borda inferior do bloco azul */
+    left: 0;
+    z-index: 5;
+}
+
+.arrow-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: none;
+    background-color: #ffffff;
+    color: #8E8CD8;
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cards-wrapper {
+    display: flex;
+    gap: 15px;
+}
+
+.pet-card {
+    background-color: #ffffff;
+    width: 140px;
+    height: 160px;
+    border-radius: 18px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.card-title {
+    font-size: 0.85rem;
+    color: #A0A0A0;
+    font-weight: 700;
+}
+
+/* Espaços reservados para as miniaturas de animais nos cards */
+.card-img {
+    width: 100%;
+    height: 100px;
+    background-color: #f2f2f7;
+    border-radius: 12px;
 }
