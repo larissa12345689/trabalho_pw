@@ -1,8 +1,10 @@
-/* CONFIGURAÇÕES GERAIS E RESET */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500;800;900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 
 body {
@@ -11,25 +13,6 @@ body {
     overflow-x: hidden;
 }
 
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    position: relative;
-    height: 100%;
-}
-
-/* HERO SECTION (Fundo principal azul/violeta com degradê inferior suave) */
-.hero-section {
-    position: relative;
-    width: 100%;
-    min-height: 600px;
-    background: linear-gradient(180deg, #8E8CD8 0%, #9997E3 85%, #918fde 100%);
-    padding-bottom: 80px;
-    overflow: hidden;
-}
-
-/* MARCAS D'ÁGUA (Patinhas flutuantes no fundo) */
 .paw-bg {
     position: absolute;
     color: rgba(255, 255, 255, 0.15);
@@ -41,194 +24,294 @@ body {
 .paw-2 { top: 40px; right: 15%; font-size: 7rem; }
 .paw-3 { bottom: 150px; left: 40px; font-size: 5rem; }
 
-/* NAVBAR */
+.seção-principal {
+    position: relative;
+    width: 100%;
+    height: 700px;
+    background: linear-gradient(180deg, #8E8CD8 0%, #9997E3 85%, #918fde 100%);
+    overflow: hidden;
+    box-shadow: 0 40px 60px rgba(145, 143, 222, 0.4);
+}
+
+
 .navbar {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 25px 0;
+    justify-content: space-around; 
+    align-items: center;     
+    padding: 25px 80px;
+    width: 100%; 
+    height: 90px; 
+    position: absolute; 
+    top: 0;
+    left: 0;
+    z-index: 10;
 }
 
 .logo {
-    font-size: 1.6rem;
-    font-weight: 900;
-    color: #ffffff;
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
 }
 
 .logo-icon {
-    background-color: #FFA542;
-    padding: 5px;
+    background-color: #ff9f43;   
+    padding: 10px;
     border-radius: 50%;
-    font-size: 1.1rem;
-    display: inline-flex;
+    font-size: 18px;
+}
+
+.logo-text {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 900;
+    font-family:'Nunito', sans-serif;
+}
+
+.links {
+    display: flex;
     align-items: center;
     justify-content: center;
+    gap: 30px;               
 }
 
-.nav-links {
-    display: flex;
-    list-style: none;
-    gap: 35px;
-}
-
-.nav-links a {
+.links a {
     text-decoration: none;
-    color: rgba(255, 255, 255, 0.8);
-    font-weight: 700;
-    font-size: 0.95rem;
-    transition: color 0.3s;
-    position: relative;
+    color: #ffffff;             
+    font-weight: 500;
+    font-family: sans-serif;
+    font-size: 16px;
+    padding-bottom: 5px;
+    opacity: 0.8;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease;
 }
 
-.nav-links a.active {
-    color: #ffffff;
+.links a:hover, .links a.active{
+    opacity: 1;
+    border-bottom-color: #ff9f43;
 }
 
-/* Linha laranja abaixo do menu ativo */
-.nav-links a.active::after {
-    content: '';
-    position: absolute;
-    bottom: -6px;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background-color: #FFA542;
-    border-radius: 2px;
-}
-
-.nav-links a:hover {
-    color: #ffffff;
-}
-
-.cart-button {
-    background-color: #FFA542;
-    color: #ffffff;
-    padding: 10px 22px;
-    border-radius: 25px;
-    font-weight: 800;
-    font-size: 0.9rem;
+.carrinho-button {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
+    background-color: #ff9f43;   
+    color: #ffffff;
+    padding: 12px 24px;
+    border-radius: 25px;            
+    font-weight: bold;
+    font-family: 'Nunito', sans-serif;
     cursor: pointer;
-    box-shadow: 0 4px 10px rgba(255, 165, 66, 0.2);
 }
 
-/* CONTEÚDO HERO */
-.hero-content {
+.container-seção-principal {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 50px;
-    padding-bottom: 40px;
+    width: 100%;
+    height: 100%;
+    padding: 0 80px;
+    padding-top: 90px; 
 }
 
-.hero-left {
-    flex: 1;
+.container-text {
+    color: #ffffff;
+    font-family: 'Nunito', sans-serif;
+    max-width: 500px;
     z-index: 2;
 }
 
-.hero-title {
-    font-size: 3.4rem;
+.container-text h1 {
+    font-size: 3.5rem;
     font-weight: 900;
-    color: #ffffff;
-    line-height: 1.15;
-    margin-bottom: 35px;
-    letter-spacing: -0.5px;
+    margin-bottom: 20px;
 }
 
-.btn-cta {
-    background-color: #FFA542;
+.container-text p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    
+}
+
+.seção-image-container {
+    position: absolute;
+    right: 80px;
+    bottom: -55px;
+    width: 600px;
+    height: 550px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    z-index: 2;
+}
+
+.img-cat {
+    display: block;
+    height: 650px; 
+    width: auto;
+    object-fit: contain;
+    z-index: 3;
+    margin-right: -410px;
+    transform: translateY(80px);
+}
+
+.img-dog {
+    display: block;
+    height: 540px; 
+    width: auto;
+    object-fit: contain;
+    z-index: 3;
+    margin-left: -30px; 
+    z-index: 4;
+}
+
+.btn-agende{
+    margin-top: 30px;               
+    display: inline-flex;            
+    align-items: center;
+    justify-content: center;
+    background-color: #ff9f43;      
     color: #ffffff;
     border: none;
-    padding: 16px 36px;
-    border-radius: 30px;
-    font-weight: 800;
+    padding: 12px 32px;              
+    border-radius: 25px;             
+    font-weight: bold;
     font-size: 1rem;
+    font-family: 'Nunito', sans-serif;
+    text-transform: lowercase;      
     cursor: pointer;
-    box-shadow: 0 6px 20px rgba(255, 165, 66, 0.4);
-    transition: transform 0.2s, background-color 0.2s;
+    box-shadow: 0 4px 15px rgba(255, 159, 67, 0.3); 
+    transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
-.btn-cta:hover {
-    background-color: #ff9626;
+.btn-agende:hover{
+    background-color: #f9922b;
     transform: translateY(-2px);
 }
 
-.hero-right {
-    flex: 1;
-    position: relative;
-    display: flex;
-    justify-content: flex-end;
-}
 
-/* Placeholder para a imagem grande do cão e gato juntos */
-.main-animals-placeholder {
-    width: 550px;
-    height: 420px;
-    background: rgba(255, 255, 255, 0.1); /* Substituir por url('sua-imagem.png') no projeto real */
-    border-radius: 30px;
-    position: relative;
-    border-radius: 50px;
-}
 
-/* CONTROLES DO SLIDER INFERIOR (Cards e Setas) */
-.slider-container {
-    display: flex;
-    align-items: center;
-    gap: 15px;
+.bg-light-glow {
     position: absolute;
-    bottom: -40px; /* Faz com que os cards fiquem cortados na borda inferior do bloco azul */
-    left: 0;
-    z-index: 5;
+    width: 380px;
+    height: 380px;
+    background-color: rgba(255, 255, 255, 0.408);
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    filter: blur(60px); 
+    box-shadow: 0 0 100px rgba(255, 255, 255, 0.4); 
+    z-index: 1;
+    pointer-events: none;
 }
 
-.arrow-btn {
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    border: none;
-    background-color: #ffffff;
-    color: #8E8CD8;
-    font-size: 1.5rem;
-    font-weight: bold;
+.img-dog {
+    display: block;
+    width: auto;
+    height: 700px; 
+    object-fit: contain;
+    z-index: 3;
+}
+
+.carrossel {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    justify-content: flex-start; 
+    gap: 30px;                  
+    width: 100%;
+    max-width: 1200px;           
+    height: 55px;               
+    padding-left: 80px;          
+    margin-top: -90px !important; 
+    position: relative;       
+    z-index: 99;                 
 }
 
-.cards-wrapper {
-    display: flex;
-    gap: 15px;
-}
-
-.pet-card {
-    background-color: #ffffff;
-    width: 140px;
-    height: 160px;
-    border-radius: 18px;
-    padding: 15px;
+.card-carrossel {
+    width: 300px;             
+    min-height: 180px; 
+    height: auto;          
+    border-radius: 22px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08); 
+    padding: 25px;            
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    /* background-color: rgba(255, 255, 255, 0.915); */
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.4s ease;
 }
 
-.card-title {
-    font-size: 0.85rem;
-    color: #A0A0A0;
+.card-carrossel:hover{
+    transform: translateY(-8px); /* Move o card 8 pixels para cima */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12); /* Deixa a sombra mais realista e suave ao subir */
+    cursor: pointer;
+}
+
+.hearts {
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+}
+
+.review-text {
+    font-size: 0.95rem;
+    font-style: italic;
+    line-height: 1.4;
+    font-weight: 500;
+    flex-grow: 1;             
+}
+
+.review-author {
+    font-size: 0.95rem;
     font-weight: 700;
+    margin-top: 10px;
 }
 
-/* Espaços reservados para as miniaturas de animais nos cards */
-.card-img {
+.card-carrossel:nth-child(1) {
+    background-color: #FFF0F5; 
+}
+.card-carrossel:nth-child(1) .review-text {
+    color: #4A3E41;            
+}
+.card-carrossel:nth-child(1) .review-author {
+    color: #D81B60;            
+}
+
+.card-carrossel:nth-child(2) {
+    background-color: #F3E8FF; 
+}
+.card-carrossel:nth-child(2) .review-text {
+    color: #3B3343;            
+}
+.card-carrossel:nth-child(2) .review-author {
+    color: #7B2CBF;            
+}
+
+.card-carrossel:nth-child(3) {
+    background-color: #FFF8E7; 
+}
+.card-carrossel:nth-child(3) .review-text {
+    color: #463F3A;            
+}
+.card-carrossel:nth-child(3) .review-author {
+    color: #E65100;            
+}
+
+.secao-por-que-escolher {
     width: 100%;
-    height: 100px;
-    background-color: #f2f2f7;
-    border-radius: 12px;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 300px; 
+    padding: 0 80px;
+    display: flex;
+    justify-content:baseline; 
+    align-items:baseline;
+    flex-direction: column;
+}
+
+.secao-por-que-escolher h2 {
+    font-family: 'Nunito', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #434087; 
+    text-align: center;
+     
 }
