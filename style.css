@@ -86,7 +86,7 @@ body {
     transition: all 0.3s ease;
 }
 
-.links a:hover, .links a.active{
+.links a:hover{
     opacity: 1;
     border-bottom-color: #ff9f43;
 }
@@ -219,7 +219,7 @@ body {
     gap: 30px;                  
     width: 100%;
     max-width: 1200px;           
-    height: 55px;               
+    height: 180px;               
     padding-left: 80px;          
     margin-top: -90px !important; 
     position: relative;       
@@ -299,19 +299,329 @@ body {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    margin-top: 300px; 
+    margin-top: 160px;
     padding: 0 80px;
     display: flex;
-    justify-content:baseline; 
-    align-items:baseline;
     flex-direction: column;
 }
 
 .secao-por-que-escolher h2 {
-    font-family: 'Nunito', sans-serif;
-    font-size: 2.2rem;
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #3d3a6e;
+    line-height: 1.1;
+}
+
+.destaque-titulo {
+    color: #8E8CD8 !important;
+    margin-bottom: 50px;
+}
+
+.cards-motivos {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.card-motivo {
+    flex: 1;
+    min-width: 220px;
+    border-radius: 20px;
+    padding: 30px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-motivo:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+
+#motivo-verde { background-color: #e6f9f0; }
+#motivo-amarelo { background-color: #fff8e1; }
+#motivo-rosa { background-color: #fce4f0; }
+
+.motivo-icon {
+    font-size: 2rem;
+    background: #ffffff;
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+.card-motivo h3 {
+    font-size: 1.1rem;
     font-weight: 800;
-    color: #434087; 
+    color: #3d3a6e;
+}
+
+.card-motivo p {
+    font-size: 0.9rem;
+    color: #6b6898;
+    line-height: 1.5;
+}
+
+
+.secao-animais {
+    width: 100%;
+    max-width: 1200px;
+    margin: 100px auto 0;
+    padding: 0 80px;
+}
+
+.titulo-secao {
+    font-size: 2rem;
+    font-weight: 900;
+    color: #3d3a6e;
+    margin-bottom: 30px;
+}
+
+.animais-catalogo {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 36px;
+    flex-wrap: wrap;
+}
+
+.animal {
+    padding: 10px 22px;
+    border-radius: 15px;
+    border: 2px solid #e0dff5;
+    background: transparent;
+    color: #6b6898;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+    cursor:default;
+}
+
+#roxo{ background-color: #EDE9FF;}
+#rosa{ background-color: #FFE9F3}
+#azul{background-color: #E8F7FF;}
+#laranja{ background-color: #FFF3E0}
+#verde{ background-color: #E8F5E9}
+#vermelho{ background-color: #FFF0F0}
+
+.grid-catalogo {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.card-pet {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 24px;
+    box-shadow: 0 8px 24px rgba(142, 140, 216, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.card-pet:hover{
+    cursor: pointer;
+    transform:scale(1.03);
+    box-shadow: 10px 40px 30px rgba(109, 107, 166, 0.1);
+}
+
+
+.card-pet-img {
+    font-size: 4rem;
     text-align: center;
-     
+    background: #f0eeff;
+    border-radius: 14px;
+    padding: 20px;
+}
+
+.card-pet h3 {
+    font-size: 1rem;
+    font-weight: 800;
+    color: #3d3a6e;
+}
+
+
+.badge-destaque {
+    position: absolute;
+    top: -10px;
+    right: 16px;
+    background-color: #ff9f43;
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 800;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-family: 'Nunito', sans-serif;
+}
+
+.btn-agendar {
+    background: #8E8CD8;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 12px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.btn-agendar:hover {
+    background: #ff9f43;
+}
+
+.card-pet-img {
+    font-size: 4rem;
+    text-align: center;
+    background: #f5f4ff;
+    border-radius: 14px;
+    padding: 20px;
+}
+
+.card-pet h3 {
+    font-size: 1rem;
+    font-weight: 800;
+    color: #3d3a6e;
+}
+
+.secao-galeria {
+    width: 100%;
+    max-width: 1200px;
+    margin: 100px auto 0;
+    padding: 0 80px;
+}
+
+.grid-galeria {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 200px);
+    gap: 16px;
+    margin-top: 30px;
+}
+
+.foto-galeria {
+    border-radius: 18px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.foto-galeria:hover {
+    transform: scale(1.03);
+    cursor: pointer;
+    
+}
+
+.foto-galeria.grande {
+    grid-row: span 2;
+}
+
+/* ===== SEÇÃO SOBRE ===== */
+.secao-sobre {
+    width: 100%;
+    max-width: 1200px;
+    margin: 100px auto 0;
+    padding: 0 80px;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.sobre-texto {
+    flex: 1;
+    min-width: 280px;
+}
+
+.sobre-texto p {
+    font-size: 1rem;
+    color: #6b6898;
+    line-height: 1.7;
+    margin-bottom: 16px;
+}
+
+.btn-sobre {
+    margin-bottom: 50px;
+    display: inline-block;
+    margin-top: 10px;
+    background-color: #8E8CD8;
+    color: white;
+    padding: 12px 28px;
+    border-radius: 25px;
+    font-weight: 800;
+    font-family: 'Nunito', sans-serif;
+    text-decoration: none;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.btn-sobre:hover {
+    background-color: #ff9f43;
+    transform: translateY(-2px);
+}
+
+.sobre-pets-emoji {
+    font-size: 5rem;
+    letter-spacing: 10px;
+    flex-shrink: 0;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    background: linear-gradient(180deg, #8E8CD8 0%, #7a78c8 100%);
+    padding: 40px 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer .logo-text {
+    font-size: 1.2rem;
+}
+
+.footer-links {
+    display: flex;
+    gap: 24px;
+}
+
+.footer-links a {
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 700;
+    transition: color 0.2s;
+}
+
+.footer-links a:hover {
+    color: #ff9f43;
+}
+
+.footer-redes {
+    font-size: 1.4rem;
+    letter-spacing: 8px;
+    cursor: pointer;
+}
+
+.footer-copy {
+    width: 100%;
+    text-align: center;
+    color: rgba(255,255,255,0.5);
+    font-size: 0.8rem;
+    margin-top: 10px;
+}
+
+/*agendamentos*/
+
+.body-agendamentos{
+    background-color:#918fde;
 }
