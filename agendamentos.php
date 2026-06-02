@@ -7,11 +7,10 @@
         <link rel="stylesheet" href="style.css">
 </head>
 <body class="body-agendamentos">
-    <header class="seção-principal">
 
         <nav class="navbar">
             <div class="logo">
-                <span class="logo-icon">🐾</span>
+                <span class="logo-icon"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M180-475q-42 0-71-29t-29-71q0-42 29-71t71-29q42 0 71 29t29 71q0 42-29 71t-71 29Zm109-189q-29-29-29-71t29-71q29-29 71-29t71 29q29 29 29 71t-29 71q-29 29-71 29t-71-29Zm240 0q-29-29-29-71t29-71q29-29 71-29t71 29q29 29 29 71t-29 71q-29 29-71 29t-71-29Zm251 189q-42 0-71-29t-29-71q0-42 29-71t71-29q42 0 71 29t29 71q0 42-29 71t-71 29ZM266-75q-45 0-75.5-34.5T160-191q0-52 35.5-91t70.5-77q29-31 50-67.5t50-68.5q22-26 51-43t63-17q34 0 63 16t51 42q28 32 49.5 69t50.5 69q35 38 70.5 77t35.5 91q0 47-30.5 81.5T694-75q-54 0-107-9t-107-9q-54 0-107 9t-107 9Z"/></svg></span>
                 <span class="logo-text">PetCare</span>
             </div>
 
@@ -28,15 +27,80 @@
             </div>
          </nav>
 
+        <div class="centraliza-container">
+            <div class="container-agendar">
+                <div class="card-agendar">
+            </div>
+                
+           
+<div class="wrap">
 
-         <div class="container-agendar">
-            <div class="card-agendar"></div>
-            
-            <div class="card-agendar"></div>
-            
-            <div class="card-agendar"></div>
+    <div class="card card-1">
+        <div class="card-left">
+            <div>
+                <div class="card-header">
+                    <div class="icon-wrap">🛁</div>
+                    <span class="card-title card-title-1">Banho</span>
+                </div>
+            </div>
+            <ul class="topicos">
+                <li>Banho completo com secagem</li>
+                <li>Hidratação profunda para pelos</li>
+                <li>Tratamento para pelos danificados</li>
+                <li>Banho medicamentoso</li>
+            </ul>
+            <button class="btn-agendar-card btn-1">Agendar</button>
         </div>
-    </header>
+        <div class="card-img-box" style="background:#c8f5e2;">
+            <img src="sua-imagem-banho.jpg" alt="Banho">
+        </div>
+    </div>
+
+    <div class="card card-2">
+        <div class="card-left">
+            <div>
+                <div class="card-header">
+                    <div class="icon-wrap">✂️</div>
+                    <span class="card-title card-title-2">Tosa</span>
+                </div>
+            </div>
+            <ul class="topicos">
+                <li>Tosa higiênica</li>
+                <li>Tosa na tesoura</li>
+                <li>Acabamento com estilo</li>
+                <li>Corte de unhas incluso</li>
+            </ul>
+            <button class="btn-agendar-card btn-2">Agendar</button>
+        </div>
+        <div class="card-img-box" style="background:#ffecc8;">
+            <img src="sua-imagem-tosa.jpg" alt="Tosa">
+        </div>
+    </div>
+
+
+    <div class="card card-3">
+        <div class="card-left">
+            <div>
+                <div class="card-header">
+                    <div class="icon-wrap">💊</div>
+                    <span class="card-title card-title-3">Consulta Veterinária</span>
+                </div>
+            </div>
+            <ul class="topicos">
+                <li>Avaliação clínica completa</li>
+                <li>Vacinação e vermifugação</li>
+                <li>Exames laboratoriais</li>
+                <li>Acompanhamento nutricional</li>
+            </ul>
+            <button class="btn-agendar-card btn-3">Agendar</button>
+        </div>
+        <div class="card-img-box" style="background:#fad4ea;">
+            <img src="sua-imagem-consulta.jpg" alt="Consulta">
+        </div>
+    </div>
+</div>
+
+    
 
     
 </body>
