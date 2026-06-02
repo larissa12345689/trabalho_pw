@@ -625,3 +625,21 @@ body {
 .body-agendamentos{
     background-color:#918fde;
 }
+
+.container-agendar{
+    display: flex;
+    justify-content: center;
+    
+    margin-top: 100px;
+    width: 100%;
+    height: 800px;
+    background-color: #D81B60;
+    
+}
+
+.card-agendar{
+    
+    width: 700px;
+    height: 300px;
+    background-color: white;
+}
