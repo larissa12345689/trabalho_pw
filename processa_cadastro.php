@@ -1,61 +1,26 @@
 <?php
-require_once "conexao.php";
+require_once 'conexao2.php';
 
-if ($_SERVER["REQUEST_METHOD"] == "POST"){
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $usuario = $_POST['usuario'];
+    $email = $_POST['email'];
+    $senha_limpa = $_POST['senha'];
 
-    $nome = $_POST["nome"];
-    $idade = $_POST["idade"];
-    $especie = $_POST["especie"];
-    $raca = $_POST["raca"];
-    $tutor = $_POST["tutor"];
-    $descricao = $_POST["descricao"];
+    $senha_criptografada = password_hash($senha_limpa, PASSWORD_DEFAULT);
 
+    $stmt = $conn->prepare("INSERT INTO users (usuario, email, senha) VALUES (:usuario, :email, :senha)");
+    
+    $stmt->bindValue(':usuario', $usuario);
+    $stmt->bindValue(':email', $email);
 
-    if (isset($_FILES['foto']) && $_FILES['foto']['error'] === UPLOAD_ERR_OK) {  
-        $arquivo = $_FILES['foto'];
-        $partes = explode('.', $arquivo['name']);
-        $extensao = strtolower(end($partes));
-        $extesoes_permitidas = ['jpg', 'jpeg', 'png', 'gif', 'webp'];
+    $stmt->bindValue(':senha', $senha_criptografada);
 
-        if (!in_array($extensao, $extesoes_permitidas)) {
-            die("Tipo de arquivo não permitido. Envie apenas imagens.");
-        }
+    if ($stmt->execute()) {
 
-        $novo_nome_arquivo = uniqid() . "." . $extensao;
-        $pasta_destino = "uploads/";
-        $caminho_final = $pasta_destino . $novo_nome_arquivo;  //vai ficar tipo uploads/65f3a1b2c4e5d.jpg
-        
-        if (move_uploaded_file($arquivo['tmp_name'], $caminho_final)) {        
-            $stmt = $conn->prepare("INSERT INTO cadastrar (foto, nome, idade, especie, raca, tutor, descricao) VALUES (:foto, :nome, :idade, :especie, :raca, :tutor, :descricao)");
-            $stmt->execute([
-                ':foto' => $novo_nome_arquivo,
-                ':nome' => $nome,
-                ':idade' => $idade,
-                ':especie' => $especie,
-                ':raca' => $raca,
-                ':tutor' => $tutor,
-                ':descricao' => $descricao
-            ]);   
-            session_start();
-            $_SESSION['mensagem'] = "pet cadastrado com sucesso";
-            header("Location: index.php"); 
-            exit;
-                                    
-        } else {
-            echo "Erro ao mover o arquivo para a pasta de destino.";
-        }
-        
+        header("Location: login.php?sucesso=1");
+        exit;
     } else {
-        echo "Erro no envio do arquivo.";
+        echo "Erro ao realizar o cadastro.";
     }
 }
-
-
-
-
-
-
-
-
-
 ?>

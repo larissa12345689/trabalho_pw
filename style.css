@@ -626,11 +626,6 @@ body {
     background-color:#918fde;
 }
 
-.centraliza-container{
-    display: flex;
-    justify-content: center;
-    margin-top: 90px;
-}
 .container-agendar{
     background-color:transparent;
     width: 100%;
@@ -640,28 +635,10 @@ body {
     border-radius: 28px;
 }
 
-/* .card-agendar{
-    width: 900px;
-    height: 290px;
-    background-color:white;
-    border-radius: 15px;
-} */ 
-
-/* ===== CARDS DE AGENDAMENTO ===== */
-
-.wrap {
-    font-family: 'Nunito', sans-serif;
-    padding: 32px 24px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
 .card {
     border-radius: 22px;
     padding: 28px;
     display: flex;
-    align-items: stretch;
     gap: 24px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -675,6 +652,7 @@ body {
 .card-1 { background-color: #e6f9f0; }
 .card-2 { background-color: #fff8e1; }
 .card-3 { background-color: #fce4f0; }
+.card-4 { background-color: #e8f4ff; }
 
 .card-left {
     flex: 1;
@@ -693,6 +671,7 @@ body {
 .card-title-1 { color: #1a7a52; }
 .card-title-2 { color: #b05d00; }
 .card-title-3 { color: #a0186a; }
+.card-title-4 { color: #1a4f8a; }
 
 .topicos {
     list-style: none;
@@ -721,6 +700,7 @@ body {
 .card-1 .topicos li::before { background: #2ecc8e; }
 .card-2 .topicos li::before { background: #f09d3a; }
 .card-3 .topicos li::before { background: #e0569a; }
+.card-4 .topicos li::before { background: #4a90d9; }
 
 .btn-agendar-card {
     align-self: flex-start;
@@ -746,6 +726,9 @@ body {
 
 .btn-3 { background: #e0569a; color: #fff; }
 .btn-3:hover { background: #c7427f; }
+
+.btn-4:hover { background: #3578c0; }
+.card-4 .topicos li::before { background: #4a90d9; }
 
 .card-img-box {
     width: 200px;
@@ -783,3 +766,16 @@ body {
     gap: 12px;
     margin-bottom: 8px;
 }
+.wrapgay{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+    padding: 10px 15px;
+    max-width: 900px;
+}
+
+.centraliza-agendamentos{
+    display: flex;
+    justify-content: center;
+}
+

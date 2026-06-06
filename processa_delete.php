@@ -1,22 +1,17 @@
 <?php
-require_once "conexao.php";
+session_start();
+require_once '../conexao.php';
 
-if (isset($_GET['id'])){
-    $id = $_GET['id'];
+$id = $_GET['id'];
 
-    $stmt = $conn->prepare("DELETE FROM cadastrar WHERE id = :id");
+$stmt = $conn->prepare('DELETE FROM banho WHERE id = :id AND usuario_id = :usuario_id');
+$stmt->bindValue(':id',$id);
+$stmt->bindValue(':usuario_id',$_SESSION['usuario_id']);
 
-    $stmt->bindValue(':id', $id);
+$stmt->execute();
 
-    $stmt->execute();
-
-    header("Location: processa_listar_pet.php");
-    exit;
-}
-
-
-
-
+header("Location: listar_banho.php");
+exit();
 
 
 

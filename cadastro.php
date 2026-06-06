@@ -1,43 +1,9 @@
-<?php
-session_start(); 
- 
-if (isset($_SESSION['usuario_id'])) {
-    header("Location: agendamentos.php");
-    exit();
-}
- 
-require_once 'conexao2.php';
- 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $usuario = $_POST['usuario'];
-    $email = $_POST['email'];
-    $senha_limpa = $_POST['senha'];
- 
-    $stmt = $conn->prepare("SELECT * FROM users WHERE usuario = :usuario AND email = :email");
-    $stmt->bindValue(':usuario', $usuario);
-    $stmt->bindValue(':email', $email);
-    $stmt->execute();
- 
-    $dados = $stmt->fetch(PDO::FETCH_ASSOC);
- 
-    if ($dados && password_verify($senha_limpa, $dados['senha'])) {
-        $_SESSION['usuario_id'] = $dados['id'];
-
-        header("Location: ../banho/banho_form.php");
-        exit();
-
-    } else {
-        $erro = "Usuário ou senha incorretos!";
-    }
-}
-?>
- 
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - PetCare</title>
+    <title>Cadastro - PetCare</title>
     <link rel="stylesheet" href="../style.css">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800;900&display=swap" rel="stylesheet">
     <style>
@@ -122,12 +88,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         .formulario-titulo { font-size: 1.6rem; font-weight: 900; color: #3d3a6e; text-align: center; margin: 0; }
         .formulario-subtitulo { font-size: 0.88rem; color: #6b6898; text-align: center; margin: 0 0 10px; }
  
-        .alerta-erro {
-            width: 100%; background: #fce4f0; color: #a0186a;
-            border-radius: 12px; padding: 12px 16px;
-            font-size: 0.9rem; font-weight: 700; text-align: center;
-        }
- 
         .formulario { width: 100%; display: flex; flex-direction: column; gap: 14px; margin-top: 8px; }
  
         .campo-grupo { display: flex; flex-direction: column; gap: 5px; }
@@ -177,14 +137,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </div>
  
         <div class="links">
-            <a href="../index.php">Início</a>
-            <a href="../agendamentos.php">Agendamentos</a>
+            <a href="index.php">Início</a>
+            <a href="agendamentos.php">Agendamentos</a>
             <a href="#">Avaliações</a>
+            
         </div>
  
         <div class="carrinho-button">
             <span class="carrinho-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#ffffff"><path d="M223.5-103.5Q200-127 200-160t23.5-56.5Q247-240 280-240t56.5 23.5Q360-193 360-160t-23.5 56.5Q313-80 280-80t-56.5-23.5Zm400 0Q600-127 600-160t23.5-56.5Q647-240 680-240t56.5 23.5Q760-193 760-160t-23.5 56.5Q713-80 680-80t-56.5-23.5ZM246-720l96 200h280l110-200H246Zm-38-80h590q23 0 35 20.5t1 41.5L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68-39.5t-2-78.5l54-98-144-304H40v-80h130l38 80Zm134 280h280-280Z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#ffffff"><path d="M223.5-103.5Q200-127 200-160t23.5-56.5Q247-240 280-240t56.5 23.5Q360-193 360-160t-23.5 56.5Q313-80 280-80t-56.5-23.5Zm400 0Q600-127 600-160t23.5-56.5Q647-240 680-240t56.5 23.5Q760-193 760-160t-23.5 56.5Q713-80 680-80t-56.5-23.5ZM246-720l96 200h590q23 0 35 20.5t1 41.5L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68-39.5t-2-78.5l54-98-144-304H40v-80h130l38 80Zm134 280h280-280Z"/></svg>
             </span>
             <span class="carrinho-text">Loja</span>
         </div>
@@ -193,35 +154,31 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <div class="pagina-formulario">
         <div class="caixa-formulario">
  
-            <div class="formulario-icone">🐾</div>
-            <h2 class="formulario-titulo">Bem-vindo de volta!</h2>
-            <p class="formulario-subtitulo">Entre na sua conta para agendar serviços</p>
+            <div class="formulario-icone">🐕</div>
+            <h2 class="formulario-titulo">Criar Conta</h2>
+            <p class="formulario-subtitulo">Cadastre-se e cuide do seu pet com a gente!</p>
  
-            <?php if (!empty($erro)): ?> <!-- se nao estiver vaziaaaaa -->
-                <div class="alerta-erro"><?= $erro ?></div>
-            <?php endif; ?>
- 
-            <form action="login.php" method="POST" class="formulario">
+            <form action="processa_cadastro.php" method="POST" class="formulario">
                 <div class="campo-grupo">
                     <label class="campo-label">Usuário</label>
-                    <input type="text" name="usuario" placeholder="Seu nome de usuário" class="campo-input" required>
+                    <input type="text" name="usuario" placeholder="Escolha um nome de usuário" class="campo-input" required>
                 </div>
  
                 <div class="campo-grupo">
                     <label class="campo-label">E-mail</label>
-                    <input type="text" name="email" placeholder="seu@email.com" class="campo-input" required>
+                    <input type="email" name="email" placeholder="seu@email.com" class="campo-input" required>
                 </div>
  
                 <div class="campo-grupo">
                     <label class="campo-label">Senha</label>
-                    <input type="password" name="senha" placeholder="Sua senha" class="campo-input" required>
+                    <input type="password" name="senha" placeholder="Crie uma senha segura" class="campo-input" required>
                 </div>
  
-                <button type="submit" class="btn-formulario">Entrar</button>
+                <button type="submit" class="btn-formulario">Cadastrar</button>
             </form>
  
             <p class="formulario-rodape">
-                Não tem uma conta? <a href="cadastro.php" class="link-formulario">Cadastre-se aqui</a>
+                Já tem uma conta? <a href="login.php" class="link-formulario">Faça Login aqui</a>
             </p>
         </div>
     </div>
