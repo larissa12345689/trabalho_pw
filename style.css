@@ -88,21 +88,14 @@ body {
 
 .links a:hover{
     opacity: 1;
+    font-weight: 700px;
+}
+
+.links a.active {
+    opacity: 1;
     border-bottom-color: #ff9f43;
 }
 
-.carrinho-button {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    background-color: #ff9f43;   
-    color: #ffffff;
-    padding: 12px 24px;
-    border-radius: 25px;            
-    font-weight: bold;
-    font-family: 'Nunito', sans-serif;
-    cursor: pointer;
-}
 
 .container-seção-principal {
     display: flex;
@@ -525,7 +518,6 @@ body {
     grid-row: span 2;
 }
 
-/* ===== SEÇÃO SOBRE ===== */
 .secao-sobre {
     width: 100%;
     max-width: 1200px;
@@ -574,7 +566,6 @@ body {
     flex-shrink: 0;
 }
 
-/* ===== FOOTER ===== */
 .footer {
     background: linear-gradient(180deg, #8E8CD8 0%, #7a78c8 100%);
     padding: 40px 80px;
@@ -651,8 +642,6 @@ body {
 
 .card-1 { background-color: #e6f9f0; }
 .card-2 { background-color: #fff8e1; }
-.card-3 { background-color: #fce4f0; }
-.card-4 { background-color: #e8f4ff; }
 
 .card-left {
     flex: 1;
@@ -670,8 +659,7 @@ body {
 
 .card-title-1 { color: #1a7a52; }
 .card-title-2 { color: #b05d00; }
-.card-title-3 { color: #a0186a; }
-.card-title-4 { color: #1a4f8a; }
+
 
 .topicos {
     list-style: none;
